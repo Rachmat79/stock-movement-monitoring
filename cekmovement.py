@@ -929,7 +929,7 @@ st.markdown("""
     <div class="hero-icon">📊</div>
     <h1>Stock movement Monitoring</h1>
     <p class="hero-author">Author : Rachmat Hidayat</p>
-    <p class="hero-sub">Sales &amp; Interlocation vs Stock Movement Checker · Professional Inventory Intelligence Platform</p>
+    <p class="hero-sub">Sales &amp; Interlocation vs Stock Movement Checker · Professional Inventory HRN</p>
     <div class="hero-badge"><span class="dot"></span>LIVE &nbsp;•&nbsp; OPTIMUS CLOUD</div>
 </div>
 """, unsafe_allow_html=True)

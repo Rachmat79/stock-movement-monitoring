@@ -82,48 +82,55 @@ st.markdown("""
     }
     .block-container { padding-top: 1.5rem; max-width: 1400px; }
     h1, h2, h3, h4, h5, p, span, label, div { color: var(--text-primary); }
-    .stCaption, [data-testid="stCaptionContainer"] { color: var(--text-secondary) !important; }
+    .stApp p, .stApp span, .stApp label, .stApp li { font-size: 14px; }
+    .stCaption, [data-testid="stCaptionContainer"] { color: var(--text-secondary) !important; font-size: 12px !important; }
+
+    /* Sidebar title ("Panel Control") - dikecilkan supaya proporsional */
+    section[data-testid="stSidebar"] h1 { font-size: 19px !important; }
+    section[data-testid="stSidebar"] h2 { font-size: 16px !important; }
+    section[data-testid="stSidebar"] h3 { font-size: 14px !important; }
+    section[data-testid="stSidebar"] p, section[data-testid="stSidebar"] label { font-size: 13px !important; }
 
     /* ---------------- HERO HEADER ---------------- */
     .hero-header {
         position: relative;
         text-align: center;
-        padding: 44px 24px 40px 24px;
-        margin-bottom: 28px;
+        padding: 34px 24px 30px 24px;
+        margin-bottom: 24px;
         border-radius: 14px;
         background: var(--surface-glass);
         border: 1px solid var(--border-glass);
         box-shadow: 0 1px 3px rgba(0,0,0,0.06);
         overflow: hidden;
     }
-    .hero-header .hero-icon { font-size: clamp(28px, 3vw, 40px); position: relative; z-index: 1; }
+    .hero-header .hero-icon { font-size: clamp(22px, 2.2vw, 30px); position: relative; z-index: 1; }
     .hero-header h1 {
         position: relative; z-index: 1;
-        font-size: clamp(20px, 2vw, 26px); font-weight: 800; margin: 6px 0 6px 0;
+        font-size: clamp(17px, 1.6vw, 21px); font-weight: 800; margin: 6px 0 6px 0;
         color: var(--text-primary);
-        letter-spacing: -0.5px;
-        line-height: 1.2;
+        letter-spacing: -0.3px;
+        line-height: 1.25;
     }
     .hero-header p.hero-sub {
         position: relative; z-index: 1;
-        font-size: clamp(12px, 1.1vw, 14px); color: var(--text-secondary); font-weight: 500;
-        margin-bottom: 14px;
+        font-size: clamp(11px, 0.9vw, 12.5px); color: var(--text-secondary); font-weight: 500;
+        margin-bottom: 12px;
     }
     .hero-header p.hero-author {
         position: relative; z-index: 1;
-        font-size: clamp(11px, 0.9vw, 12.5px); color: var(--text-secondary); font-weight: 500;
-        opacity: 0.85; margin: -4px 0 16px 0; letter-spacing: 0.3px;
+        font-size: clamp(10px, 0.8vw, 11px); color: var(--text-secondary); font-weight: 500;
+        opacity: 0.85; margin: -2px 0 14px 0; letter-spacing: 0.3px;
     }
     .hero-badge {
         position: relative; z-index: 1;
         display: inline-flex; align-items: center; gap: 6px;
-        padding: 6px 16px; border-radius: 999px;
+        padding: 5px 14px; border-radius: 999px;
         background: #ECFDF5;
         border: 1px solid #A7F3D0;
-        color: #059669; font-size: 12px; font-weight: 700; letter-spacing: 1px;
+        color: #059669; font-size: 11px; font-weight: 700; letter-spacing: 0.8px;
     }
     .hero-badge .dot {
-        width: 7px; height: 7px; border-radius: 50%; background: #10B981;
+        width: 6px; height: 6px; border-radius: 50%; background: #10B981;
         animation: pulse-dot 1.6s infinite;
     }
     @keyframes pulse-dot { 0%,100%{opacity:1;} 50%{opacity:0.3;} }
@@ -133,17 +140,17 @@ st.markdown("""
         background: var(--surface-glass);
         border: 1px solid var(--border-glass);
         border-radius: 14px;
-        padding: 22px 24px;
-        margin-bottom: 22px;
+        padding: 18px 20px;
+        margin-bottom: 18px;
         box-shadow: 0 1px 3px rgba(0,0,0,0.06);
         transition: box-shadow 0.2s ease;
     }
-    .glass-card h4 { margin-top: 0; font-weight: 700; }
+    .glass-card h4 { margin-top: 0; font-weight: 700; font-size: 14px; }
     .glass-card-title {
-        font-size: 15px; font-weight: 700; color: var(--text-primary);
+        font-size: 13.5px; font-weight: 700; color: var(--text-primary);
         margin-bottom: 4px; display: flex; align-items: center; gap: 8px;
     }
-    .glass-card-sub { font-size: 13px; color: var(--text-secondary); margin-bottom: 14px; }
+    .glass-card-sub { font-size: 12px; color: var(--text-secondary); margin-bottom: 12px; }
 
     /* Audit / summary box */
     .audit-box {
@@ -177,10 +184,10 @@ st.markdown("""
         box-shadow: 0 4px 12px rgba(0,0,0,0.10);
     }
     .kpi-label {
-        font-size: 12px; font-weight: 600; text-transform: uppercase;
-        letter-spacing: 0.8px; color: var(--text-secondary); margin-bottom: 8px;
+        font-size: 11px; font-weight: 600; text-transform: uppercase;
+        letter-spacing: 0.6px; color: var(--text-secondary); margin-bottom: 6px;
     }
-    .kpi-value { font-size: 30px; font-weight: 800; line-height: 1.1; }
+    .kpi-value { font-size: 24px; font-weight: 800; line-height: 1.1; }
 
     /* ---------------- FILE UPLOADER ---------------- */
     [data-testid="stFileUploaderDropzone"] {
@@ -261,7 +268,8 @@ st.markdown("""
         border: none;
         border-radius: 8px;
         font-weight: 700;
-        padding: 10px 22px;
+        font-size: 13.5px;
+        padding: 8px 20px;
         transition: background 0.2s ease;
     }
     .stButton > button:hover, .stDownloadButton > button:hover {
@@ -442,12 +450,12 @@ st.markdown("""
     /* hero-header h1/sub/author already use clamp() for fluid sizing, so
        no fixed-size override needed here anymore. */
     @media (max-width: 1366px) {
-        .kpi-value { font-size: 24px; }
+        .kpi-value { font-size: 20px; }
     }
     @media (max-width: 768px) {
-        .hero-header { padding: 28px 16px; }
-        .glass-card { padding: 16px; }
-        .kpi-value { font-size: 20px; }
+        .hero-header { padding: 24px 14px; }
+        .glass-card { padding: 14px; }
+        .kpi-value { font-size: 18px; }
     }
 
     /* ---------------- DROPDOWN POPUP - HARD OVERRIDE (kept last so it
